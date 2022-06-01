@@ -14426,7 +14426,7 @@ Note: Output the average scores across all CV validation partitions and best par
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><p>To test your implementation, please use the attached dataset <code>'DR_Demo_Lending_Club_reduced.csv'</code>. It contains a binary classification target for predicting loan defaults, where the column <code>is_bad</code> contains the target variable and all other columns contain features. Make sure to explore the dataset to think of feature corner cases which your model must handle.</p>
+<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><p>To test your implementation, please use the attached dataset <code>sample_dataset.csv</code>. It contains a binary classification target for predicting loan defaults, where the column <code>is_bad</code> contains the target variable and all other columns contain features. Make sure to explore the dataset to think of feature corner cases which your model must handle.</p>
 <p>Assume the data can have numeric and categorical variables. Both your training and prediction functions will take in a two-dimensional pandas DataFrame with a mixture of categorical and numeric variables.</p>
 
 </div>
@@ -14467,7 +14467,7 @@ Note: Output the average scores across all CV validation partitions and best par
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DR_Demo_Lending_Club_reduced.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_dataset.csv&#39;</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;is_bad&#39;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;is_bad&#39;</span><span class="p">])</span>
 <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -14918,7 +14918,7 @@ memory usage: 1.8+ MB
 
     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">OOPModel</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DR_Demo_Lending_Club_reduced.csv&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_dataset.csv&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;is_bad&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;is_bad&#39;</span><span class="p">])</span>
 
